@@ -26,6 +26,22 @@
           padding: 0;
           margin: 0 auto;
         }
+        .btn.btn-light {
+            background-color: white;
+            color: black;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 4px solid #E1E1E1;
+        }
+
+        .btn.btn-light:hover {
+            border-bottom: 4px solid green;
+        }
+
+        .project-title input:focus {
+            outline: none; 
+        }
     </style>
 </head>
 
@@ -194,9 +210,16 @@
             <section class="content" style="padding: 4vh;">
                 <div class="container-fluid">
                     <!-- Your content goes here -->
-                    <h3 class="font-weight-bold pb-3">CI/OPI</h3>
-                    <div class="row">
+                    <div class="container-fluid">
+                        <!-- Your content goes here -->
+                        <h3 style="font-weight: bold;">Improvement Plan</h3>
+                        <h4 style="font-weight: lighter;">Unlocking Excellent!</h4>
                         
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Basic example" style="gap: 0.5rem; margin-left: 0.5rem;">
+                        <button type="button" class="btn btn-light">My History</button>
+                        <button type="button" class="btn btn-light">Need your approval</button>
+                        <button type="button" class="btn btn-light">Add / Edit</button>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
@@ -209,15 +232,7 @@
                                                 <span class="font-weight-bold pl-2" style="font-size: 20px;">CI/OPI History</span>
                                             </div>
                                         </div>
-                                        <div class="col-sm-1" style="float: right;">
-                                          <a href="C:\Users\ramad\OneDrive\Documents\CIOPI\CIOPI\ciopimyhistory.html" class="btn btn-primary btn-sm">My History</a>
-                                        </div>
-                                        <div class="col-sm-1" style="float: right;">
-                                          <a href="C:\Users\ramad\OneDrive\Documents\CIOPI\CIOPI\needyourapprovalA.html" class="btn btn-secondary btn-sm">Need Approve</a>
-                                        </div>
-                                        <div class="col-sm-1" style="float: right;">
-                                          <a href="<?=url?>?page=FAK" class="btn btn-secondary btn-sm">Add CI/OPI</a>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -243,6 +258,8 @@
                             </div>
                         </div>
                     </div>
+
+                    
                 </div>
                 <!-- /.container-fluid -->
             </section>

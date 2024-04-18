@@ -179,7 +179,18 @@
                                           <td>Project A</td>
                                           <td> angelo </td>
                                           <td>2024-04-18</td>
-                                          <td>ahmad</td>
+                                          <td>
+                                            <!-- Dropdown untuk Project Remarks -->
+                                            <div class="dropdown">
+                                                <button class="btn btn-light dropdown-toggle btn-sm" type="button" id="dropdownMenuAssignedto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Assigned
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuAssignedto">
+                                                    <a class="dropdown-item" href="#" onclick="selectAssignedto('Elo', 'dropdownMenuAssignedto')"> Elo</a>
+                                                    <a class="dropdown-item" href="#" onclick="selectAssignedto('Jane', 'dropdownMenuAssignedto')">Jane</a>
+                                                </div>
+                                            </div>
+                                          </td>
                                           <td> - </td>
                                           <td>
                                               <!-- Dropdown untuk Project Remarks -->
@@ -190,7 +201,6 @@
                                                   <div class="dropdown-menu" aria-labelledby="dropdownMenuRemarks">
                                                       <a class="dropdown-item" href="#" onclick="selectRemarks('Hold', 'dropdownMenuRemarks')"> Hold</a>
                                                       <a class="dropdown-item" href="#" onclick="selectRemarks('Running', 'dropdownMenuRemarks')">Running</a>
-                                                      <!-- Tambahkan opsi lain jika diperlukan -->
                                                   </div>
                                               </div>
                                           </td>
@@ -203,7 +213,6 @@
                                                   <div class="dropdown-menu" aria-labelledby="dropdownMenuType">
                                                       <a class="dropdown-item" href="#" onclick="selectProjectType('CI', 'dropdownMenuType')">CI</a>
                                                       <a class="dropdown-item" href="#" onclick="selectProjectType('OPI', 'dropdownMenuType')">OPI</a>
-                                                      <!-- Tambahkan opsi lain jika diperlukan -->
                                                   </div>
                                               </div>
                                           </td>
@@ -292,7 +301,14 @@
             var dropdownToggle = option.closest('.dropdown').querySelector('.dropdown-toggle');
             dropdownToggle.textContent = optionText;
         }
+        
+        // Fungsi untuk mengubah teks tombol dropdown saat opsi dipilih Assigned To
+        function selectAssignedto(assignedto, dropdownId) {
+          var dropdownToggle = document.getElementById(dropdownId);
+          dropdownToggle.textContent = assignedto;
+        }
 
+        // Fungsi untuk mengubah teks tombol dropdown saat opsi dipilih remark
         function selectRemarks(remark, dropdownId) {
           var dropdownToggle = document.getElementById(dropdownId);
           dropdownToggle.textContent = remark;

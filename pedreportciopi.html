@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base target="_top">
-    <title>CI/OPI Online | HRMS</title>
+    <title>CI/OPI Report | HRMS</title>
     <!-- AdminLTE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/css/adminlte.css">
     <!-- Font Awesome CSS -->
@@ -103,7 +103,7 @@
                         </li>
                         <li class="nav-item">
                           <a href="C:\Users\ramad\OneDrive\Documents\CIOPI\CIOPI\pedreportciopi.html" class="nav-link" target="_top">
-                              <i class="nav-icon fa-circle-user fas"></i>
+                              <i class="nav-icon fa-solid fa-book"></i>
                               <p>
                                   Report - CI/OPI
                                   <i class="right fas fa-angle-right"></i>
@@ -132,7 +132,7 @@
             <!-- Main content -->
             <section class="content" style="padding: 4vh;">
                 <div class="container-fluid">
-                    <h3 class="font-weight-bold pb-3">CI/OPI Online</h3>
+                    <h3 class="font-weight-bold pb-3">CI/OPI Report</h3>
                     <div class="card">
                         <div class="card-header">
                             <div class="p3 row">
@@ -140,7 +140,7 @@
                                     style="display: inline-flex; justify-content: space-between;">
                                     <div class="card-title">
                                         <i class="fas fa-filter mr-1"></i>
-                                        <span class="font-weight-bold pl-2" style="font-size: 20px;">CI/OPI </span>
+                                        <span class="font-weight-bold pl-2" style="font-size: 20px;">CI/OPI Report </span>
                                     </div>
                                 </div>
                             </div>
@@ -152,86 +152,27 @@
                                     <thead style="background-color: red; color: white; white-space: nowrap;">
                                       <tr>
                                           <th style="vertical-align: middle;">No</th>
+                                          <th style="vertical-align: middle;">ID Submit</th>
                                           <th style="vertical-align: middle;">Project Title</th>
-                                          <th style="vertical-align: middle;">Submitted By</th>
-                                          <th style="vertical-align: middle;">Submission Date</th>
-                                          <th style="vertical-align: middle;" style="width: 100%;">Assigned to</th>
+                                          <th style="vertical-align: middle;">Type</th>
+                                          <th style="vertical-align: middle;">CI Coach</th>
                                           <th style="vertical-align: middle;">Status</th>
-                                          <th style="vertical-align: middle;">Project Remarks</th>
-                                          <th style="vertical-align: middle;">Project Type</th>
-                                          <th style="vertical-align: middle;">Phase</th>
                                           <th style="vertical-align: middle;">Action</th>
                                       </tr>
                                     </thead>                                  
                                     <tbody id="PEDTable">
                                       <tr>
                                           <td>1</td>
+                                          <td>11112321</td>
                                           <td>Project A</td>
-                                          <td> angelo </td>
-                                          <td>2024-04-18</td>
-                                          <td>
-                                            <!-- Dropdown untuk Project Remarks -->
-                                            <div class="dropdown">
-                                                <button class="btn btn-light dropdown-toggle btn-sm" type="button" style="width: 100%;" id="dropdownMenuAssignedto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Assigned
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuAssignedto">
-                                                    <a class="dropdown-item" href="#" onclick="selectAssignedto('Elo', 'dropdownMenuAssignedto')"> Elo</a>
-                                                    <a class="dropdown-item" href="#" onclick="selectAssignedto('Jane', 'dropdownMenuAssignedto')">Jane</a>
-                                                </div>
-                                            </div>
-                                          </td>
-                                          <td> - </td>
-                                          <td>
-                                              <!-- Dropdown untuk Project Remarks -->
-                                              <div class="dropdown">
-                                                  <button class="btn btn-light dropdown-toggle btn-sm" type="button" style="width: 100%;" id="dropdownMenuRemarks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                      Select Remarks
-                                                  </button>
-                                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuRemarks">
-                                                      <a class="dropdown-item" href="#" onclick="selectRemarks('Hold', 'dropdownMenuRemarks')"> Hold</a>
-                                                      <a class="dropdown-item" href="#" onclick="selectRemarks('Running', 'dropdownMenuRemarks')">Running</a>
-                                                  </div>
-                                              </div>
-                                          </td>
-                                          <td>
-                                              <!-- Dropdown untuk Project Type -->
-                                              <div class="dropdown">
-                                                  <button class="btn btn-light dropdown-toggle btn-sm" type="button" style="width: 100%;" id="dropdownMenuType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                      Select Type
-                                                  </button>
-                                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuType">
-                                                      <a class="dropdown-item" href="#" onclick="selectProjectType('CI', 'dropdownMenuType')">CI</a>
-                                                      <a class="dropdown-item" href="#" onclick="selectProjectType('OPI', 'dropdownMenuType')">OPI</a>
-                                                  </div>
-                                              </div>
-                                          </td>
-                                          <td>
-                                              <!-- Dropdown untuk Phase -->
-                                              <div class="dropdown">
-                                                  <button class="btn btn-light dropdown-toggle btn-sm" type="button" style="width: 100%;" id="dropdownMenuPhase" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                      Select Phase
-                                                  </button>
-                                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuPhase">
-                                                      <a class="dropdown-item" href="#" onclick="selectPhase('Define', 'dropdownMenuPhase')">Define </a>
-                                                      <a class="dropdown-item" href="#" onclick="selectPhase('Measure', 'dropdownMenuPhase')">Measure </a>
-                                                      <a class="dropdown-item" href="#" onclick="selectPhase('Analyze', 'dropdownMenuPhase')">Analyze </a>
-                                                      <a class="dropdown-item" href="#" onclick="selectPhase('Improvement', 'dropdownMenuPhase')">Improvement </a>
-                                                      <a class="dropdown-item" href="#" onclick="selectPhase('Control', 'dropdownMenuPhase')">Control </a>
-                                                      <!-- Tambahkan opsi lain jika diperlukan -->
-                                                  </div>
-                                              </div>
-                                          </td>
+                                          <td>CI</td>
+                                          <td>-</td>
+                                          <td>-</td>
                                           <td>
                                             <div class="btn-group-vertical">
-                                                <!-- Tombol Detail -->
-                                                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#detailModal">Detail</button>
-                                                <!-- Tombol Approve -->
-                                                <button type="button" class="btn btn-success btn-sm">Approve</button>
-                                                <!-- Tombol Delete -->
-                                                <button type="button" class="btn btn-danger btn-sm">Reject</button>
+                                                <button type="button" style="width: 100%;"class="btn btn-dark btn-sm" style="width: 100%;" data-toggle="modal" data-target="#detailModal">view</button>
                                             </div>
-                                        </td>
+                                          </td>
                                       </tr>
                                       <!-- Baris tabel lainnya -->
                                   </tbody>

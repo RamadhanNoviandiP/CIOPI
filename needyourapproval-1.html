@@ -13,35 +13,54 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
- <style>
-        .disabled-button {
-            background-color: #e0e0e0 !important;
-            color: #999999 !important;
-            cursor: not-allowed !important;
-        }
-
-        .btn-modal {
-          text-decoration: underline;
-          color: blue;
-          padding: 0;
-          margin: 0 auto;
-        }
-        .button-up a {
-            background-color: white; color: black; border-bottom: 4px solid #E1E1E1; padding: 0.5rem;
-        }
-
-        .button-up a:hover {
-            border-bottom: 4px solid green;
-        }
-
-        .project-title input:focus {
-            outline: none; 
-        }
-    </style>
+        <style>
+            .disabled-button {
+                background-color: #e0e0e0 !important;
+                color: #999999 !important;
+                cursor: not-allowed !important;
+            }
+    
+            .btn-modal {
+                text-decoration: underline;
+                color: blue;
+                padding: 0;
+                margin: 0 auto;
+            }
+    
+            .button-up a {
+                background-color: white;
+                color: black;
+                border-bottom: 4px solid #E1E1E1;
+                padding: 0.5rem;
+            }
+    
+            .button-up a:hover {
+                border-bottom: 4px solid green;
+            }
+    
+            .project-title input:focus {
+                outline: none;
+            }
+    
+            /* Tambahkan style untuk ikon pengguna */
+            .user-icon {
+                margin-bottom: 5px;
+            }
+    
+            /* Gaya untuk tautan dalam modal */
+            .modal-content a {
+                color: black; /* Warna teks hitam */
+                text-decoration: none; /* Tanpa garis bawah */
+            }
+    
+            .modal-content a:hover {
+                text-decoration: underline; /* Garis bawah saat digulir */
+            }
+        </style>
 </head>
 
 <body class="sidebar-mini layout-fixed">
-  <?var url = getScriptUrl();?>
+    <?var url = getScriptUrl();?>
     <div class="wrapper">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -50,9 +69,33 @@
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                 </li>
-                <!-- <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Home</a>
-            </li> -->
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- User Account: style can be found in dropdown.less -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="fas fa-user-circle" style="margin-right: 8px;"></i>
+                        <span class="d-none d-md-inline">Atasan A</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <a href="#" class="dropdown-item" >
+                            <!-- User image and details -->
+                            <div class="media">
+                                <i class="fas fa-user-circle fa-3x" style="margin-right: 10px;"></i>
+                                <div class="media-body">
+                                    <h3 class="dropdown-item-title">
+                                        Atasan A
+                                    </h3>
+                                    <p class="text-sm">Head 1</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item" data-toggle="modal" data-target="#accountModal">Change Account</a>
+                        <a href="#" class="dropdown-item dropdown-footer">Logout</a>
+                    </div>
+                </li>
             </ul>
         </nav>
         <!-- /.navbar -->
@@ -73,8 +116,10 @@
                         data-accordion="false">
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon"><img src="https://www.spil.co.id/img/spil_logo.581f4306.svg" alt="logo-spil" style="width: 4vh;"></i>
-                                <p class="font-weight-bold" style="font-size: 10pt; padding-left: 16px;">Connecting Islands</p>
+                                <i class="nav-icon"><img src="https://www.spil.co.id/img/spil_logo.581f4306.svg"
+                                        alt="logo-spil" style="width: 4vh;"></i>
+                                <p class="font-weight-bold"
+                                    style="font-size: 10pt; padding-left: 16px;">Connecting Islands</p>
                             </a>
                         </li>
                     </ul>
@@ -89,7 +134,8 @@
                             </div>
                         </div>
                     </div>
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="true">
                         <!-- Add more sidebar menu items here -->
                         <li class="nav-item border-bottom">
                             <a href="<?=url?>" class="nav-link" target="_top">
@@ -136,55 +182,60 @@
                         <h3 style="font-weight: bold;">CI/OPI Online</h3>
                         <h4 style="font-weight: lighter;">Unlocking Excellent!</h4>
                     </div>
-                    <div class="button-up" style="display: flex; justify-content: left; align-items: center; margin-left: 0.5rem; gap: 0.5rem;">
-                    <a href="C:\Users\ramad\OneDrive\Documents\CIOPI\CIOPI\ciopimyhistory.html">My History</a>
-                    <a href="C:\Users\ramad\OneDrive\Documents\CIOPI\CIOPI\needyourapproval.html">Need Approve</a>
-                    <a href="C:\Users\ramad\OneDrive\Documents\CIOPI\CIOPI\add-edit.html">Add / Edit</a>
-                </div>
+                    <div class="button-up"
+                        style="display: flex; justify-content: left; align-items: center; margin-left: 0.5rem; gap: 0.5rem;">
+                        <a href="C:\Users\ramad\OneDrive\Documents\CIOPI\CIOPI\ciopimyhistory.html">My
+                            History</a>
+                        <a href="C:\Users\ramad\OneDrive\Documents\CIOPI\CIOPI\needyourapproval.html">Need
+                            Approve</a>
+                        <a href="C:\Users\ramad\OneDrive\Documents\CIOPI\CIOPI\add-edit.html">Add / Edit</a>
+                    </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
                                     <div class="p3 row">
-                                        <div class="col-sm-9" style="display: inline-flex; justify-content: space-between;">
+                                        <div class="col-sm-9"
+                                            style="display: inline-flex; justify-content: space-between;">
                                             <div class="card-title">
                                                 <i class="fas fa-filter mr-1"></i>
-                                                <span class="font-weight-bold pl-2" style="font-size: 20px;">Need your Approval</span>
+                                                <span class="font-weight-bold pl-2"
+                                                    style="font-size: 20px;">Need your Approval</span>
                                             </div>
                                         </div>
-                                        
                                     </div>
                                 </div>
-                <div class="card-body">
-                    <div class="card-body">             
-                        <table id="tablePeriod" class="table table-bordered table-hover table-sm" style="width: 100%;">
-                            <thead style="background-color: green; color: white;">
-                            <tr>
-                                <th>No</th>
-                                <th>Doc. Number</th>
-                                <th>Submit Date</th>
-                                <th>Title </th>
-                                <th>Type	</th>
-                                <th>Last Approval</th>
-                                <th>Last Status</th>
-                                <th>Action</th>
-                            </tr>
-                            </thead>
-                            <tbody id="CIOPITable">
-                            </tbody>
-                        </table>
+                                <div class="card-body">
+                                    <div class="card-body">
+                                        <table id="tablePeriod"
+                                            class="table table-bordered table-hover table-sm" style="width: 100%;">
+                                            <thead style="background-color: green; color: white;">
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Doc. Number</th>
+                                                    <th>Submit Date</th>
+                                                    <th>Title </th>
+                                                    <th>Type</th>
+                                                    <th>Last Approval</th>
+                                                    <th>Last Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="CIOPITable">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>                
-    </div>
-    <!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-    <!-- Main Footer -->
+                <!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Main Footer -->
         <footer class="main-footer">
             <!-- To the right -->
             <div class="float-right d-none d-sm-inline">
@@ -196,24 +247,44 @@
     </div>
     <!-- ./wrapper -->
 
-    <div class="modal fade" id="datamodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+    <!-- Modal untuk memilih akun -->
+    <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="accountModalLabel">Select Account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between">
+                        <!-- Pengguna 1 -->
+                        <div class="flex-fill mr-2 text-center">
+                            <a href="C:\Users\ramad\OneDrive\Documents\CIOPI\CIOPI\needyourapproval-1.html" class="list-group-item">
+                                <div class="user-icon">
+                                    <i class="fas fa-user fa-2x"></i> <!-- Icon Pengguna -->
+                                </div>
+                                <div>Atasan A</div> <!-- Teks Atasan -->
+                            </a>
+                        </div>
+                        <!-- Pengguna 2 -->
+                        <div class="flex-fill ml-2 text-center">
+                            <a href="C:\Users\ramad\OneDrive\Documents\CIOPI\CIOPI\needyourapproval-2.html" class="list-group-item">
+                                <div class="user-icon">
+                                    <i class="fas fa-user fa-2x"></i> <!-- Icon Pengguna -->
+                                </div>
+                                <div>Atasan B</div> <!-- Teks Atasan -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- REQUIRED SCRIPTS -->
